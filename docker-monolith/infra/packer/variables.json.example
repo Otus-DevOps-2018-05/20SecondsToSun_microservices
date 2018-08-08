@@ -1,0 +1,11 @@
+{
+    "project_id": "infra-131313",
+    "source_image_family": "ubuntu-xxxx-xxx",
+    "machine_type": "xx-micro",
+    "disk_size": "10",
+    "disk_type": "pd-standard",
+    "tags":"xxx-server",
+    "network": "default",
+    "image_description":"Ubuntu, ruby and mongodb default installed",
+    "service_name":"xxx-app"
+  }

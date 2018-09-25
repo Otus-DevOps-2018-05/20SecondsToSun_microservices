@@ -1,0 +1,35 @@
+---
+- name: Install Docker App
+  hosts: all
+  become: true
+  tasks:
+  - name: Add key
+    apt_key:
+      url: https://download.docker.com/linux/ubuntu/gpg
+      state: present
+    register: add_repository_key
+  - name: Add Docker repository
+    apt_repository:
+      repo: deb [arch=amd64] https://download.docker.com/linux/ubuntu xenial stable
+      state: present
+  - name: Install Docker
+    apt:
+      name: "{{ item }}"
+      state: present
+    loop:
+        - apt-transport-https
+        - ca-certificates
+        - curl
+        - software-properties-common
+        - docker-ce
+        - python-pip
+  - name: Install docker python library
+    pip:
+      name: docker
+      state: present
+
+  - name: Enable Docker daemon
+    service:
+      name: docker
+      enabled: yes
+      state: stopped

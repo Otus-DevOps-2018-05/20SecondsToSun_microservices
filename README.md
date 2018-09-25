@@ -3,6 +3,16 @@
 
 [![Build Status](https://travis-ci.com/Otus-DevOps-2018-05/20SecondsToSun_microservices.svg?branch=master)](https://travis-ci.com/Otus-DevOps-2018-05/20SecondsToSun_microservices)
 
+# Homework Docker 2
+### Основная часть
+ -  Создан Docker образ
+ -  Образ загружен в Docker hub
+ 
+### Дополнительная часть
+ -  Создан шаблон Packer, который делает образ с Docker
+ -  Поднятие инстансов с помощью Terraform
+ -  Установка Docker и запуск приложение с помощью Ansible
+
 # Homework Docker 1
 ### Основная часть
  - Добавлена интеграция с travis + формат pull request
@@ -13,3 +23,4 @@
 
 ### Дополнительная часть
 - Описано отличие образа от контейнера в лог файле
+
